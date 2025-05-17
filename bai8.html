@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XẾP LOẠI ĐIỂM</title>
+</head>
+<body>
+    <script>
+        function xepLoai(diem){
+            if(diem>=9){
+                document.write("Xuất sắc");
+            }
+            else if(diem>=8){
+                document.write("Giỏi");
+            }
+            else if(diem>=6.5){
+                document.write("Khá");
+            }
+            else if(diem>=5){
+                document.write("Trung bình");
+            }
+            else{
+                document.write("Yếu");
+            }
+        }
+        let diem = parseInt(prompt("Nhập vào một điểm số từ 0 đến 10 :"));
+        xepLoai(diem);
+    </script>
+</body>
+</html>

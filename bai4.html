@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TỔNG SỐ LẺ</title>
+</head>
+<body>
+    <script>
+        let tongSoLe = 0;
+        let n = parseInt(prompt('Nhập số:'));
+        for(let i = 1; i <= n; i++){
+            if(i % 2 == 1){
+                tongSoLe += i;
+            }
+        }
+        document.write(`Kết quả: ${tongSoLe}`);
+    </script>
+</body>
+</html>

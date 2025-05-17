@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VẼ TAM GIÁC</title>
+</head>
+<body>
+    <script>
+        function veTamGiac(n){
+            for(let i = 1; i <= n; i++){
+                let dong = '';
+                for(let j = 1; j <= i; j++){
+                    dong += "*";
+                }
+                document.write(dong + "<br>")
+            }
+        }
+        let dong = parseInt(prompt("Nhập số:"));
+        veTamGiac(dong);
+    </script>
+</body>
+</html>
