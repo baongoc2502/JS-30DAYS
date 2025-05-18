@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIỂM TRA MẬT KHẨU MẠNH</title>
+</head>
+<body>
+    <script>
+        function kiemTraMatKhau(matkhau){
+            if(matkhau.length >= 8 && /[A-Z]/ && /[a-z]/ && /\d/ ){
+                document.write('Mạnh');
+            }else{
+                document.write('Yếu');
+            }
+        }
+        let matkhau = prompt('Nhập mật khẩu:');
+        kiemTraMatKhau(matkhau);
+    </script>
+
+</body>
+</html>

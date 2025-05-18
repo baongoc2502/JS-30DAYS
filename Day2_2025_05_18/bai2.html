@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẢO NGƯỢC MỘT CHUỖI</title>
+</head>
+<body>
+    <script>
+        function daoNguocChuoi(str){
+            let ketQua='';
+            for(let i=str.length-1; i>=0;i--){
+                ketQua += str[i];
+            }
+            return ketQua;
+        }
+        let nhap = prompt('Nhập vào đây:')
+        alert(daoNguocChuoi(nhap));
+    </script>
+</body>
+</html>

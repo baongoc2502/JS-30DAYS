@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIỂM TRA NĂM NHUẬN</title>
+</head>
+<body>
+    <script>
+        function laNamNhuan(nam){
+            if(nam%4==0 && nam%100!=0){
+                document.write(`${nam} là năm nhuận`);
+            }else if(nam%400==0){
+                document.write(`${nam} là năm nhuận`);
+            }else{
+                document.write(`${nam} là năm ko nhuận`)
+            }
+        }
+        let nam = prompt('Nhập năm:');
+        laNamNhuan(nam);
+    </script>
+</body>
+</html>
