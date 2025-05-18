@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ĐẾM SỐ CHIA HẾT</title>
+</head>
+<body>
+  <script>
+    let count = 0;
+    for(let i = 1; i<=100; i++){
+      if(i % 3 == 0 && i % 5 == 0){
+        count++;
+      }
+    }
+    document.write(`Từ 1 đến 100 có ${count} số chia hết cho cả 3 và 5.`);
+  </script>
+</body>
+</html>

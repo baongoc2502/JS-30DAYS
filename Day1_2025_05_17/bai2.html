@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TÍNH GIAI THỪA</title>
+</head>
+<body>
+    <script>
+        function tinhGiaiThua(n){
+            if (n==0){
+                return 1;
+            }
+            return n * tinhGiaiThua(n-1);
+        }
+        let number = parseInt(prompt("Nhập số n:"));
+        document.write(tinhGiaiThua(number));
+    </script>
+</body>
+</html>

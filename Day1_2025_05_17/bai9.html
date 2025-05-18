@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TÍNH TỔNG CHỮ SỐ</title>
+</head>
+<body>
+    <script>
+        function tongChuSo(n){
+            let tong = 0;
+            while(n>0){
+                tong += n%10;
+                n = Math.floor(n/10);
+
+            }
+            return tong;
+        }
+        let n = parseInt(prompt("Nhập số:"));
+        let ketqua = tongChuSo(n);
+        document.write("Tổng các chữ số là:" + ketqua);
+    </script>
+</body>
+</html>
