@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+}
+
+.top-nav {
+  background: #e74c3c;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  font-size: 0.95rem;
+}
+.top-nav .nav-left a,
+.top-nav .nav-right a {
+  color: #fff;
+  margin-right: 1.2rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.top-nav .nav-left a:last-child,
+.top-nav .nav-right a:last-child {
+  margin-right: 0;
+}
+.top-nav .nav-right a:hover {
+  opacity: 0.7;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1rem 2rem;
+  background: #fff;
+}
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222;
+}
+.logo span {
+  color: #e74c3c;
+}
+.banner {
+  text-align: center;
+  background: #f7f7f7;
+  padding: 1.2rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  display: inline-block;
+}
+.banner p {
+  margin: 0 0 0.7rem 0;
+  font-size: 1.15rem;
+  color: #444;
+}
+.banner button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.banner button:hover {
+  background: #c0392b;
+}
+
+.main-nav {
+  background: #fff;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.main-nav li {
+  position: relative;
+}
+.main-nav li.active > a {
+  color: #e74c3c;
+  font-weight: bold;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.05rem;
+  padding: 0.3rem 0.2rem;
+  transition: color 0.2s;
+}
+.main-nav a:hover {
+  color: #e74c3c;
+}
+.arrow {
+  font-size: 0.7em;
+  margin-left: 0.2em;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  border-radius: 20px;
+  padding: 0.2rem 0.8rem;
+}
+.search-box input[type="search"] {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.4rem 0.5rem;
+}
+.search-icon {
+  color: #888;
+  font-size: 1.1rem;
+  margin-left: 0.2rem;
+}
+
+.featured {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem 0 2rem;
+  gap: 2rem;
+}
+.card {
+  flex: 1;
+  background: #222;
+  color: #fff;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  height: 340px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.card-tech {
+  background: linear-gradient(rgba(44,62,80,0.5),rgba(44,62,80,0.7)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80') center/cover no-repeat;
+}
+.card-env {
+  background: linear-gradient(rgba(34,139,34,0.4),rgba(34,139,34,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80') center/cover no-repeat;
+}
+.card-food {
+  background: linear-gradient(rgba(230, 126, 34, 0.4),rgba(230, 126, 34, 0.7)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80') center/cover no-repeat;
+}
+.tag {
+  padding: 0.35rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.tech { background: #4c6ef5; }
+.env { background: #a259c6; }
+.food { background: #27ae60; }
+.card h2 {
+  font-size: 1.45rem;
+  margin: 0 0 0.7rem 0;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.date {
+  font-size: 0.95rem;
+  color: #f1f1f1;
+  opacity: 0.85;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .featured {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .card {
+    height: 220px;
+    padding: 1.2rem 1rem 1rem 1rem;
+  }
+  .header, .main-nav, .top-nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
