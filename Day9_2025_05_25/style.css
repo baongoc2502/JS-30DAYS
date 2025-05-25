@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('https://cdn-media.sforum.vn/storage/app/media/ctvseocps123/hinh-nen-8d-thumbnail.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.content{
+    background-color: hsl(0, 100%, 100%);
+    padding: 20px;
+    border-radius: 50px;
+    text-align: center;
+    width: 1500px;
+    height: 750px;
+}
+h2{
+    font-size: 7rem;
+    margin-top: 10;
+}
+select{
+    width: 85%;
+    padding: 30px 25px;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+    border-radius: 15px;
+}
+button{
+    padding: 30px 15px;
+    width: 85%;
+    font-size: 4rem;
+    box-sizing: border-box;
+    margin-top: 80px;
+    border-radius: 15px;
+}
