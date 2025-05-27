@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name" : "Dân Trí Title Changer",
+  "version": "1.0",
+  "description": "Thay đổi tiêu đề bài báo trên Dân Trí",
+  "content_scripts": [
+    {
+      "matches": ["*://dantri.com.vn/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
