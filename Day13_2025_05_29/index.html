@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="container">
+        <h2>Thêm sinh viên vào danh sách</h2>
+        <div class="content">
+            Mã sinh viên: <input type="text" id="studentId">
+            Họ tên: <input type="text" id="studentName">
+            Email: <input type="text" id="studentEmail">
+            Số điện thoại: <input type="text" id="studentPhone">
+        </div>
+        <button id="addButton">Thêm</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Mã SV</th>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>SĐT</th>
+            </tr>
+        </thead>
+        <tbody id="studentTableBody">
+            <!--Dữ liệu học sinh sẽ được thêm vào đây-->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
