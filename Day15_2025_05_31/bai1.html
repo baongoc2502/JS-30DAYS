@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Student {
+    constructor(id, name, email, age) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
+
+    displayInfo() {
+        console.log(`ID: ${this.id}, Name: ${this.name}, Email: ${this.email}, Age: ${this.age}`);
+    }
+    }
+
+    const student1 = new Student(1, "Ngọc", "ngoc@gmail.com", 19 +"<br>");
+    const student2 = new Student(2, "Linh", "linh@gmail.com", 20);
+
+    student1.displayInfo();
+    student2.displayInfo();
+    </script>
+</body>
+</html>

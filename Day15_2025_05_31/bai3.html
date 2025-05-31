@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Product {
+        constructor(id, name, price, quantity) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.quantity = quantity;
+        }
+
+        getTotalValue() {
+            return this.price * this.quantity;
+        }
+        }
+
+        const products = [];
+
+        function addProduct(product) {
+        products.push(product);
+        }
+
+        function getTotalInventoryValue() {
+        return products.reduce((sum, p) => sum + p.getTotalValue(), 0);
+        }
+
+        function getMostExpensiveProduct() {
+        return products.reduce((max, p) => (p.price > max.price ? p : max));
+        }
+
+        // Test
+        addProduct(new Product(1, "iPhone", 1000, 3));
+        addProduct(new Product(2, "Laptop", 1500, 2));
+        addProduct(new Product(3, "Tablet", 700, 5));
+
+        console.log("Tổng giá trị kho:", getTotalInventoryValue() + "<br>");
+        console.log("Sản phẩm giá cao nhất:", getMostExpensiveProduct());
+
+    </script>
+</body>
+</html>

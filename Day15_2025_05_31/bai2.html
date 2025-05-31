@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee {
+        constructor(name, position, baseSalary, workingDays) {
+            this.name = name;
+            this.position = position;
+            this.baseSalary = baseSalary;
+            this.workingDays = workingDays;
+        }
+
+        calculateSalary() {
+            return this.baseSalary * this.workingDays;
+        }
+
+        show() {
+            document.write(`Name: ${this.name}, Position: ${this.position}, Salary: ${this.calculateSalary()}`);
+        }
+        }
+
+        const emp1 = new Employee("Ngọc", "Developer", 300, 20);
+        emp1.show();
+
+    </script>
+</body>
+</html>
