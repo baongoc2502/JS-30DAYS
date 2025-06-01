@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="product-input">
+        <h2>Quản lý sản phẩm</h2>
+        <input type="text" id="productId" placeholder="ID">
+        <input type="text" id="productName" placeholder="Tên">
+        <input type="number" id="productPrice" placeholder="Giá">
+        <input type="number" id="productQuantity" placeholder="Số lượng">
+        <button id="addProductBtn">Thêm</button>
+    </div>
+
+    <div class="product-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng giá trị</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                <!-- Sản phẩm sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="summary">
+        <p>Tổng giá trị tồn kho: <span id="totalInventoryValue">0 VNĐ</span></p>
+        <p>Sản phẩm đắt nhất: <span id="mostExpensiveProduct">N/A</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
