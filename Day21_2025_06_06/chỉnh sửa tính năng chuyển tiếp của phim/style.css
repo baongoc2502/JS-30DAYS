@@ -1,0 +1,92 @@
+ body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      border-left: 4px solid #f4c430;
+      padding-left: 10px;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-xemthem {
+      background-color: #a8775c;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .nav-arrow {
+      background-color: #4a3b33;
+      border: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      color: #aaa;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-arrow:hover {
+      background-color: #6c574b;
+      color: white;
+    }
+
+    .movie-container {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .movie-row {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
+
+    .movie-item {
+      min-width: 180px;
+      flex-shrink: 0;
+      background-color: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .movie-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .movie-title {
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    /* Ẩn thanh cuộn ngang */
+    .movie-row::-webkit-scrollbar {
+      display: none;
+    }
