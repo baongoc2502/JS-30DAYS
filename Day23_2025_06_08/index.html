@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div id="dt_contenedor">   <!--NỘI DUNG PHẦN 1-->
+        <header id="header" class="main" style="opacity: 1;"> <!--PHẦN ĐẦU CỦA TRANG WEB-->
+            <div class="hbox">
+                <div class="fix-hidden">
+                    <div class="logo"> <!--LOGO CỦA TRANG WEB-->
+                        <a href="https://motphimtop.com">
+                            <img src="https://motphimtop.com/wp-content/uploads/2025/03/a96479dd7664529948c4ecc24c25a309.png" alt="MotPhim | Phim">
+                        </a>
+                    </div>
+                </div>
+                <div class="head-main-nav"> <!--NỘI DUNG-->
+                    <div>
+                        <h1>Motphim | Phim Mới | Phim Hay | Xem Phim Online - Vietsub</h1>
+                    </div>
+                    <div class="menu-main-container"> <!--THÙNG CHỨA PHẦN MENU CỦA PHIM-->
+                        <ul class="main-header">
+                            <li><a href="#">Phim lẻ</a></li>
+                            <li><a href="#">Phim bộ</a></li>
+                            <li class="dropdown">
+                                <a href="#">Thể loại <span class="arrow">▼</span></a>
+                                <ul class="submenu">
+                                    <li><a href="https://motphimtop.com/the-loai/kinh-di/">Kinh Dị</a></li>
+                                    <li><a href="https://motphimtop.com/the-loai/bi-an/">Bí ẩn</a></li>
+                                    <li><a href="https://motphimtop.com/the-loai/vien-tuong/">Viễn Tưởng</a></li>
+                                    <li><a href="https://motphimtop.com/the-loai/chinh-kich/">Chính kịch</a></li>
+                                    <li><a href="https://motphimtop.com/the-loai/hanh-dong/">Hành Động</a></li>
+                                    <li><a href="https://motphimtop.com/the-loai/hai-huoc/">Hài Hước</a></li>
+                                    <li><a href="https://motphimtop.com/the-loai/hinh-su/">Hình Sự</a></li>
+                                    <li><a href="https://motphimtop.com/the-loai/tam-ly/">Tâm Lý</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Quốc gia <span class="arrow">▼</span></a>
+                                <ul class="submenu">
+                                    <li><a href="https://motphimtop.com/quoc-gia/viet-nam/">Việt Nam</a></li>
+                                    <li><a href="https://motphimtop.com/quoc-gia/anh/">Anh</a></li>
+                                    <li><a href="https://motphimtop.com/quoc-gia/trung-quoc/">Trung Quốc</a></li>
+                                    <li><a href="https://motphimtop.com/quoc-gia/hong-kong/">Hồng Kông</a></li>
+                                    <li><a href="https://motphimtop.com/quoc-gia/dai-loan/">Đài Loan</a></li>
+                                    <li><a href="https://motphimtop.com/quoc-gia/au-my/">Âu Mỹ</a></li>
+                                    <li><a href="https://motphimtop.com/quoc-gia/han-quoc/">Hàn Quốc</a></li>
+                                    <li><a href="https://motphimtop.com/quoc-gia/thai-lan/">Thái Lan</a></li>
+                                    <li><a href="https://motphimtop.com/quoc-gia/canada/">Canada</a></li>
+                                    <li><a href="https://motphimtop.com/quoc-gia/indonesia/">Indonesia</a></li>
+                                    <li><a href="https://motphimtop.com/quoc-gia/singapore/">Singapore</a></li>
+                                </ul>
+                            </li>                   
+                        </ul>
+                    </div>
+                </div>
+                <!-- Nút mở đăng nhập -->
+                  <button class="login-btn" onclick="showLogin()">Đăng Nhập</button>
+
+                  <!-- Overlay + Form -->
+                  <div class="overlay" id="overlay" onclick="closeLogin(event)">
+                    <div class="login-form-container" onclick="event.stopPropagation()">
+                      <div class="close-btn" onclick="closeLogin(event)">×</div>
+                      <h2>Đăng Nhập Tài Khoản</h2>
+                      <input type="email" placeholder="Email...">
+                      <input type="password" placeholder="Mật khẩu...">
+                      <button>Đăng Nhập</button>
+                    </div>
+                  </div>
+                <!-- Thêm link Font Awesome -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm...">                   
+                    <button><i class="fas fa-search"></i></button>
+                    <ul id="suggestions" class="suggestion-box"></ul>
+                </div>                    
+           </div>
+        </header>
+    </div> <!--HẾT NỘI DUNG PHẦN 1-->
+        
+        <div id="slider">
+            <div class="alphabet-nav">
+                <span>#</span><span>A</span><span>B</span><span>C</span><span>D</span>
+                <span>E</span><span>F</span><span>G</span><span>H</span><span>I</span>
+                <span>J</span><span>K</span><span>L</span><span>M</span><span>N</span>
+                <span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span>
+                <span>T</span><span>U</span><span>V</span><span>W</span><span>X</span>
+                <span>Y</span><span>Z</span>    
+            </div>
+        </div>
+        <!--NỘI DUNG PHẦN 2-->
+    <div class="main-content">
+          <div class="content-left">          <!-- BÊN TRÁI: NỘI DUNG PHIM -->
+            <!-- SLIDER PHIM NỔI BẬT -->
+            <div class="slider">
+              <div class="movies">
+                <div class="movie-card">
+                  <img src="https://motphimtop.com/wp-content/uploads/2025/05/69705f7f344c061fb012147f2b9563f4.jpg" alt="Chồng Người Ta">
+                  <div class="movie-info">
+                    <h3>Chồng Người Ta</h3>
+                    <p>2024</p>
+                  </div>
+                  <div class="tag">PHIM LẺ</div>
+                </div>
+                <div class="movie-card">
+                  <img src="https://motphimtop.com/wp-content/uploads/2025/05/06512bed8ea61bc1d8e25d481a697bd7-scaled.jpg" alt="Ngược Dòng Cuộc Đời">
+                  <div class="movie-info">
+                    <h3>Ngược Dòng Cuộc Đời</h3>
+                    <p>2025</p>
+                  </div>
+                  <div class="tag">PHIM LẺ</div>
+                </div>
+                <div class="movie-card">
+                  <img src="https://motphimtop.nl/wp-content/uploads/2025/05/chi-dau.jpg" alt="Chị Dâu - The Real Sister">
+                  <div class="movie-info">
+                    <h3>Chị Dâu - The Real Sister</h3>
+                    <p>2025</p>
+                  </div>
+                  <div class="tag">PHIM LẺ</div>
+                </div>
+                <div class="movie-card">
+                  <img src="https://motphimtop.nl/wp-content/uploads/2025/05/211155cb7c48_640_360.jpeg" alt="Nhiệm Vụ: Bất Khả Thi – Nghiệp Báo (Phần 1)">
+                  <div class="movie-info">
+                    <h3>Nhiệm Vụ: Bất Khả Thi – Nghiệp Báo (Phần 1)</h3>
+                    <p>2023</p>
+                  </div>
+                  <div class="tag">PHIM LẺ</div>
+                </div> 
+                <div class="movie-card">
+                  <img src="https://motphimtop.nl/wp-content/uploads/2025/06/gEhugpZ83SSUlCmAJPJFAMognGV-scaled.webp" alt="Lực Lượng Bóng Tối">
+                  <div class="movie-info">
+                    <h3>Lực Lượng Bóng Tối</h3>
+                    <p>2025</p>
+                  </div>
+                  <div class="tag">PHIM LẺ</div>
+                </div> 
+                <div class="movie-card">
+                  <img src="https://motphimtop.nl/wp-content/uploads/2025/05/1SLimeCtDZhk9CCKj4qr435yvPT-scaled.webp" alt="Tàng Hải Truyện – Legend Of Zang Hai">
+                  <div class="movie-info">
+                    <h3>Tàng Hải Truyện – Legend Of Zang Hai</h3>
+                    <p>2025</p>
+                  </div>
+                  <div class="tag">PHIM LẺ</div>
+                </div> 
+                <div class="movie-card">
+                  <img src="https://motphimtop.nl/wp-content/uploads/2025/05/1920x1080-utopia.jpg" alt="Địa Đàng Sụp Đổ">
+                  <div class="movie-info">
+                    <h3>Địa Đàng Sụp Đổ</h3>
+                    <p>2025</p>
+                  </div>
+                  <div class="tag">PHIM LẺ</div>
+                </div> 
+                <div class="movie-card">
+                  <img src="https://motphimtop.nl/wp-content/uploads/2025/05/85b3235b9cf393959f5c58ef3980976f.jpg" alt="Yadang: Ba Mặt Lật Kèo – Yadang: The Snitch">
+                  <div class="movie-info">
+                    <h3>Yadang: Ba Mặt Lật Kèo – Yadang: The Snitch</h3>
+                    <p>2025</p>
+                  </div>
+                  <div class="tag">PHIM LẺ</div>
+                </div> 
+
+              </div> <!--div của movies-->
+              
+            </div> <!--div của slider-->
+            <div class="slider-pagination">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <!-- PHIM HOT -->
+            <div class="section-header">
+              <h2 class="section-title"><span>|</span> Phim HOT</h2>
+              <div class="top-bar">
+                <button class="btn-xemthem">XEM THÊM</button>
+                <button class="nav-arrow" onclick="scrollCarousel('hotMovies', -1)">&#8249;</button>
+                <button class="nav-arrow" onclick="scrollCarousel('hotMovies', 1)">&#8250;</button>
+              </div>
+            </div>
+            <div class="film-list" id="hotMovies">
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">24/24</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/04/zfbbNW7r3x0F05Q2J0Mn8y6XDTo-200x300.webp" alt="Tận Cùng Của Vô Tận">
+                <div class="film-title">
+                  Cuộc Sống Tuơi Đẹp<br>
+                  <span class="film-subtitle">Endless Protection 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">TẬP 26/49</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/dcdf67108a6973b891d33c48c642d07a-214x300.jpg" alt="Sư Thành Sơn Hải">
+                <div class="film-title">
+                  Sư Thành Sơn Hải<br>
+                  <span class="film-subtitle">Contender 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">TẬP 3</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/81afb9b0ed4831a63f7c0749d09ed768-214x300.jpg" alt="Cuộc Sống Của Hình Cảnh">
+                <div class="film-title">
+                  Cuộc Sống Của Hình Cảnh<br>
+                  <span class="film-subtitle">Into The Heat 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">TẬP 11</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/3c1b0e320bdb203d97700b3e2da43a9c-203x300.jpg" alt="Tình Yêu Giả Tạo">
+                <div class="film-title">
+                  Tình Yêu Giả Tạo<br>
+                  <span class="film-subtitle">Kill Lover 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">TẬP 6</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/abace89184cc4066be0c735bb062a121-200x300.jpg" alt="Khế Ước Bí Mật Của Phù Thủy">
+                <div class="film-title">
+                  Khế Ước Bí Mật Của Phù Thủy<br>
+                  <span class="film-subtitle">The Secret Contract Of The Witch</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">25/29</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/04/da957a79a4e8a3a80abbf3a141b8d69c-200x300.jpg" alt="Tận Cùng Của Vô Tận">
+                <div class="film-title">
+                  Tận Cùng Của Vô Tận<br>
+                  <span class="film-subtitle">Endless Protection 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">25/30</span>
+                <img src="https://motphimtop.nl/wp-content/uploads/2025/05/ga-nham-the-tu-phi-thumb-200x300.jpg" alt="Gả Nhầm Thế Tử Phi – Destiny of Love">
+                <div class="film-title">
+                  Gả Nhầm Thế Tử Phi – Destiny of Love<br>
+                  <span class="film-subtitle">Destiny of Love 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">10/25</span>
+                <img src="https://motphimtop.nl/wp-content/uploads/2025/06/53319aca4dc6f16dc4ccb32cdf80400d-200x300.jpg" alt="Mong Mẹ Đổi Đời">
+                <div class="film-title">
+                  Mong Mẹ Đổi Đời<br>
+                  <span class="film-subtitle">Threading Mom's Wings 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">25/29</span>
+                <img src="https://motphimtop.nl/wp-content/uploads/2025/04/ddc83aefe923808865af0b344d91e7ff-200x300.jpg" alt="Lãnh Địa Tử Chiến">
+                <div class="film-title">
+                  Lãnh Địa Tử Chiến<br>
+                  <span class="film-subtitle">MobLand 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- PHIM LẺ -->
+            <div class="section-header">
+              <h2 class="section-title"><span>|</span> Phim Lẻ</h2>
+              <div class="top-bar">
+                  <button class="btn-xemthem">XEM THÊM</button>
+                  <button class="nav-arrow" onclick="scrollCarousel('singleMovies', -1)">&#8249;</button>
+                  <button class="nav-arrow" onclick="scrollCarousel('singleMovies', 1)">&#8250;</button>
+                </div>
+            </div>
+            <div class="film-list" id="singleMovies">
+              <div class="film-item">
+                <span class="badge badge-full">FULL</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/0f5b9bad68c4ee8b0b573c382fead46a-200x300.jpg" alt="Chú Nguyền">
+                <div class="film-title">Chú Nguyền</div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-full">FULL</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/216f2513ec75d59283604b258f22e42e-200x300.jpg" alt="Lừa Dối">
+                <div class="film-title">Lừa Dối</div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-full">XEM THÊM</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/5292bfdea0221592d52cd9ded9401ee4-200x300.jpg" alt="Yakuza và Gia Đình">
+                <div class="film-title">Yakuza và Gia Đình</div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-full">XEM THÊM</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/565919ddccb2987a011d19c063d08853-200x300.jpg" alt="Annabelle">
+                <div class="film-title">Annabelle</div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-full">XEM THÊM</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/50c4afdc7f6137bcdaa35eac215de658-200x300.jpg" alt="Nạn Đói 1942">
+                <div class="film-title">Nạn Đói 1942</div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-full">XEM THÊM</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/11a009ebf7c0575482671e35a0fd9110-200x300.jpg" alt="Vòng Lặp Hai Phút">
+                <div class="film-title">Vòng Lặp Hai Phút</div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-full">XEM THÊM</span>
+                <img src="https://motphimtop.nl/wp-content/uploads/2025/06/8d433ae93f9c5ba3086c1742b65f63b1-200x300.jpg" alt="Harry Potter và Mệnh Lệnh Phượng Hoàng">
+                <div class="film-title">Harry Potter và Mệnh Lệnh Phượng Hoàng</div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-full">XEM THÊM</span>
+                <img src="https://motphimtop.nl/wp-content/uploads/2025/06/e2d6dbbf390095540d96e477a0567d8c-213x300.jpg" alt="Những Đoá Anh Túc Đỏ">
+                <div class="film-title">Những Đoá Anh Túc Đỏ</div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-full">XEM THÊM</span>
+                <img src="https://motphimtop.nl/wp-content/uploads/2025/06/704d0dd2c11f9d7ff7e2501e58521961-200x300.jpg" alt="“Sói” Thủ Đối Đầu">
+                <div class="film-title">“Sói” Thủ Đối Đầu</div>
+              </div>
+            </div>
+            <!--PHIM BỘ-->
+            <div class="section-header">
+              <h2 class="section-title"><span>|</span> Phim Bộ</h2>
+              <div class="top-bar">
+                  <button class="btn-xemthem">XEM THÊM</button>
+                  <button class="nav-arrow" onclick="scrollCarousel('seriesMovies', -1)">&#8249;</button>
+                  <button class="nav-arrow" onclick="scrollCarousel('seriesMovies', 1)">&#8250;</button>
+                </div>
+            </div>
+            <div class="film-list" id="seriesMovies">
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">24/24</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/04/1908024d2b0d0b738f32485770020c7e-200x300.jpg" alt="Mùa Hoa Rơi Gặp Lại Chàng">
+                <div class="film-title">
+                  Mùa Hoa Rơi Gặp Lại Chàng<br>
+                  <span class="film-subtitle">Love Never Fails 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">TẬP 26/40</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/dcdf67108a6973b891d33c48c642d07a-214x300.jpg" alt="Sư Thành Sơn Hải">
+                <div class="film-title">
+                  Sư Thành Sơn Hải<br>
+                  <span class="film-subtitle">Contender 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">TẬP 3</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/04/223ac4ea48489c5ea7c12b35a788c837-203x300.jpg" alt="Hoài Thủy Trúc Đình">
+                <div class="film-title">
+                  Hoài Thủy Trúc Đình<br>
+                  <span class="film-subtitle">Love in Pavilion 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">TẬP 11</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/04/0a1528a5a29c65e629b8850df90aedaa-212x300.jpg" alt="Chuyện Đời Bác Sĩ Nội Trú">
+                <div class="film-title">
+                  Chuyện Đời Bác Sĩ Nội Trú<br>
+                  <span class="film-subtitle">Resident Playbook 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">TẬP 6</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/05/abace89184cc4066be0c735bb062a121-200x300.jpg" alt="Khế Ước Bí Mật Của Phù Thủy">
+                <div class="film-title">
+                  Khế Ước Bí Mật Của Phù Thủy<br>
+                  <span class="film-subtitle">The Secret Contract Of The Witch</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">25/29</span>
+                <img src="https://motphimtop.com/wp-content/uploads/2025/04/da957a79a4e8a3a80abbf3a141b8d69c-200x300.jpg" alt="Tận Cùng Của Vô Tận">
+                <div class="film-title">
+                  Tận Cùng Của Vô Tận<br>
+                  <span class="film-subtitle">Endless Protection 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">25/40</span>
+                <img src="https://motphimtop.nl/wp-content/uploads/2025/06/025424cf62248b9a7b54279ef5416e26-200x300.jpg" alt="Thám Tử Lừng Danh Conan">
+                <div class="film-title">
+                  Thám Tử Lừng Danh Conan <br>
+                  <span class="film-subtitle">Detective Conan 1996</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">21/29</span>
+                <img src="https://motphimtop.nl/wp-content/uploads/2025/05/ff93013d79b6b699bcd35a78f3d936d7-200x300.jpg" alt="Thần Đô Hồ Thám">
+                <div class="film-title">
+                  Thần Đô Hồ Thám<br>
+                  <span class="film-subtitle">Shendu Fox Detective 2025</span>
+                </div>
+              </div>
+              <div class="film-item">
+                <span class="badge badge-hot">NỔI BẬT</span>
+                <span class="badge badge-ep">17/40</span>
+                <img src="https://motphimtop.nl/wp-content/uploads/2025/06/2a0665927dc2316bdf41f094bb36ddfd-210x300.jpg" alt="Nhân Chứng Rắc Rối">
+                <div class="film-title">
+                  Nhân Chứng Rắc Rối<br>
+                  <span class="film-subtitle">The Witness 2020</span>
+                </div>
+              </div>
+            </div> <!--div của film list-->
+            <!--BÀI VIÊT -->
+              <div class="post-section">
+                <div class="post-header">
+                  <span class="post-title"><span>|</span> Bài Viết</span>
+                  <a href="#" class="post-more">Xem thêm</a>
+                </div>
+                <div class="post-list">
+                  <div class="post-item">
+                    <div class="post-date">
+                      <span class="post-day">5</span>
+                      <span class="post-month">THÁNG 5</span>
+                    </div>
+                    <div class="post-content">
+                      <div class="post-headline">Top 10 Bộ Phim Netflix Hay Mà Bạn Không Thể Bỏ Lỡ</div>
+                      <div class="post-desc">
+                        Netflix đang là một trong những nền tảng giải trí trực tuyến hàng đầu thế giới, với hàng loạt siêu phẩm điện ảnh và truyền hình khiến người xem không thể rời mắt. Nếu bạn đang ...
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-item">
+                    <div class="post-date">
+                      <span class="post-day">2</span>
+                      <span class="post-month">THÁNG 5</span>
+                    </div>
+                    <div class="post-content">
+                      <div class="post-headline">Top 10 Website Xem Phim Miễn Phí Được Yêu Thích Nhất Hiện Nay</div>
+                      <div class="post-desc">
+                        Sau hàng loạt vụ đóng cửa đáng tiếc của các trang web phim miễn phí đình đám như Phimmoi, Phimmoizz..., không ít "mọt phim" rơi vào trạng thái loay hoay, không biết nên cày phim ...
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-item">
+                    <div class="post-date">
+                      <span class="post-day">4</span>
+                      <span class="post-month">THÁNG 3</span>
+                    </div>
+                    <div class="post-content">
+                      <div class="post-headline">Motphimtop.com – Đồng Hành Cùng Bạn Trong Từng Bộ Phim</div>
+                      <div class="post-desc">
+                        Cảm ơn tất cả mọi người đã ghé thăm trang web motphimtop.com của mình để xem phim miễn phí với chất lượng HD! Sự ủng hộ và đồng hành của các bạn là động lực lớn để mình tiếp ...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!--div của post-section-->  
+
+          </div> <!--div của content-left-->
+        
+
+          <!-- BÊN PHẢI: NĂM PHÁT HÀNH + PHIM NHIỀU NGƯỜI XEM -->
+          <div class="content-right">
+            <div class="year-filter">
+              <div class="filter-title">NĂM PHÁT HÀNH</div>
+              <div class="year-grid">
+                <span>2026</span><span>2025</span><span>2024</span>
+                <span>2023</span><span>2022</span><span>2021</span>
+                <span>2020</span><span>2019</span><span>2018</span>
+                <span>2017</span><span>2016</span><span>2015</span>
+                <span>2014</span><span>2013</span><span>2012</span>
+              </div>
+            </div>
+            <div class="most-viewed">
+              <div class="most-viewed-title">PHIM NHIỀU NGƯỜI XEM</div>
+              <ul class="most-viewed-list">
+                <li>
+                  <div class="mv-top">
+                  <span class="star">★</span>
+                  <span class="score">9.3</span>
+                  <span class="mv-title">Khi Cuộc Đời Cho Bạn Quả Quýt (2025)</span>
+                  </div>
+                  <div class="mv-year">2025</div>
+                </li>
+                <li>
+                  <div class="mv-top">
+                  <span class="star">★</span>
+                  <span class="score">6.4</span>
+                  <span class="mv-title">Linh Miêu: Quỷ Nhập Tràng – Bản Đ...</span>
+                  </div>
+                  <div class="mv-year">2025</div>
+                </li>
+                <li>
+                  <div class="mv-top">
+                  <span class="star">★</span>
+                  <span class="score">6.1</span>
+                  <span class="mv-title">Nhà Gia Tiên</span>
+                  </div>
+                  <div class="mv-year">2025</div>
+                </li>
+                <li>
+                  <div class="mv-top">
+                  <span class="star">★</span>
+                  <span class="score">8.3</span>
+                  <span class="mv-title">Bộ Tứ Báo Thù</span>
+                  </div>
+                  <div class="mv-year">2025</div>
+                </li>
+                <li>
+                  <div class="mv-top">
+                  <span class="star">★</span>
+                  <span class="score">3.8</span>
+                  <span class="mv-title">Thợ Sửa Ống Nước – Tubero</span>
+                  </div>
+                  <div class="mv-year">2025</div>
+                </li>
+                <li>
+                  <div class="mv-top">
+                  <span class="star">★</span>
+                  <span class="score">9.1</span>
+                  <span class="mv-title">Quỷ Nữ – Khi Chim Nhạn Trở Về</span>
+                  </div>
+                  <div class="mv-year">2025</div>
+                </li>
+                <li>
+                  <div class="mv-top">
+                  <span class="star">★</span>
+                  <span class="score">10</span>
+                  <span class="mv-title">Trò Chơi Tình Ái (孽爱游戏)</span>
+                  </div>
+                  <div class="mv-year">2025</div>
+                </li>
+                <li>
+                  <div class="mv-top">
+                  <span class="star">★</span>
+                  <span class="score">7.9</span>
+                  <span class="mv-title">Cuộc Sống Tươi Đẹp – Tôn Lệ FHD ...</span>
+                  </div>
+                  <div class="mv-year">2025</div>
+                </li>
+                <li>
+                  <div class="mv-top">
+                  <span class="star">★</span>
+                  <span class="score">9.7</span>
+                  <span class="mv-title">Hoài Thủy Trúc Đình</span>
+                  </div>
+                  <div class="mv-year">2025</div>
+                </li>
+              
+                <li>
+                  <div class="mv-top">
+                  <span class="star">★</span>
+                  <span class="score">9.3</span>
+                  <span class="mv-title">Bạch Nguyệt Phạn Tình</span>
+                  </div>
+                  <div class="mv-year">2025</div>
+                </li>
+              </ul>
+            </div> <!--div của most-viewer-->
+            <!--Phần ảnh quảng cáo-->
+            <div class="advertisement">
+              <img src="https://daotaodigitalmarketing.vn/wp-content/uploads/2021/09/cong-cu-tao-banner-shopee.jpg" alt="Quảng cáo Shoppe">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0SD_Us5_GhBqYTd7T-TW5_Lc0_ojxA9mK0Q&s" alt="Quảng cáo">
+              <img src="https://lavenderstudio.com.vn/wp-content/uploads/2019/09/chup-hinh-san-pham-my-pham-spa-15-839x1024.jpg" alt="Quảng cáo">
+            </div>
+            <div>
+              <!--TOP PHIM TRUNG HAY NHẤT-->
+              <div class="top-china-movies">
+                <div class="top-china-title">TOP PHIM TRUNG HAY NHẤT 2025</div>
+                <ul class="top-china-list">
+                  <li><span class="arrow">▶</span> Lập Tội Đồ Giám (Phần 2)</li>
+                  <li><span class="arrow">▶</span> Tẩy Trắng</li>
+                  <li><span class="arrow">▶</span> Đại Phụng Đả Canh Nhân</li>
+                  <li><span class="arrow">▶</span> Quốc Sắc Phương Hoa</li>
+                  <li><span class="arrow">▶</span> Khó Dỗ Dành</li>
+                  <li><span class="arrow">▶</span> Sáu Chị Em</li>
+                  <li><span class="arrow">▶</span> Khi Chim Nhạn Trở Về (Quý Nữ)</li>
+                  <li><span class="arrow">▶</span> Bạch Nguyệt Phạn Tình</li>
+                  <li><span class="arrow">▶</span> Người Chơi Cờ</li>
+                  <li><span class="arrow">▶</span> Ngũ Phúc Lâm Môn</li>
+                  <li><span class="arrow">▶</span> Đồng Chí</li>
+                  <li><span class="arrow">▶</span> Bắc Thượng</li>
+                </ul>
+              </div>
+        
+          </div> <!--div của content-right-->
+    </div> <!--div của main-content-->
+  </div> <!--div của wrapper-->
+  <!--NỘI DUNG PHẦN 3-->
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-col logo-col">
+          <div class="img-container">
+            <img src="https://motphimtop.com/wp-content/uploads/2025/03/a96479dd7664529948c4ecc24c25a309.png" alt="Motphim Logo" class="footer-logo">
+          </div>
+          <div class="footer-domain">w w w . v u i 8 8 . c o m</div>
+          <div class="footer-desc">
+            Motphim - Xem phim Online, Vietsub thuyết minh miễn phí với giao diện thân thiện, luôn cập nhật phim nhanh chóng, các bộ phim chiếu rạp, phim bộ Trung Quốc và Hàn Quốc
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">Quốc Gia</div>
+          <a href="#" class="footer-link">Phim lẻ</a>
+          <a href="#" class="footer-link">Phim bộ</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">Thể Loại</div>
+          <a href="#" class="footer-link">Tin tức</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">Thông tin</div>
+          <a href="#" class="footer-link">Giới thiệu</a>
+          <a href="#" class="footer-link">Liên hệ</a>
+          <a href="#" class="footer-link">Chính sách bảo mật</a>
+          <a href="#" class="footer-link">Khiếu nại bản quyền</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-links">
+          Motphim | Xem Phim Online | Phim Mới | Phim Hay | Phim HD Vietsub | 
+          <a href="#" class="footer-highlight">vui88</a> | 
+          <a href="#" class="footer-highlight">daga</a> | 
+          <a href="#" class="footer-highlight">linkvaovui88</a>
+        </div>
+        <div class="footer-backtop">
+          <a href="#" title="Lên đầu trang"><span class="footer-arrow">&#9650;</span></a>
+        </div>
+      </div>
+    </footer>     
+    
+    <script src="script.js"></script>
+</body>
+</html>
