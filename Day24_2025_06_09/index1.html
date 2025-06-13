@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Xem Phim - Giao Diện Tối/Sáng</title>
+  <style>
+    /* Giao diện mặc định (sáng) */
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial, sans-serif;
+      transition: all 0.3s ease;
+      padding: 20px;
+    }
+
+    /* Giao diện tối */
+    body.dark-mode {
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+
+    /* Nút chuyển chế độ */
+    #toggle-mode {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    /* Giao diện tối của nút */
+    body.dark-mode #toggle-mode {
+      background-color: #f5f5f5;
+      color: #121212;
+    }
+
+    /* Thẻ phim mẫu */
+    .movie-card {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #f0f0f0;
+    }
+
+    body.dark-mode .movie-card {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggle-mode">🌙 Chế độ tối</button>
+
+  <h1>🍿 Danh sách phim nổi bật</h1>
+  <div class="movie-card">🎬 Ẩn Nấp Nơi Vực Sâu – Abyss Dweller</div>
+  <div class="movie-card">🎬 Va Chạm – Clash – Chong – Zhuang</div>
+
+  <script>
+    const btn = document.getElementById('toggle-mode');
+    const body = document.body;
+
+    // Tải lại trang vẫn nhớ chế độ
+    if (localStorage.getItem('mode') === 'dark') {
+      body.classList.add('dark-mode');
+      btn.innerText = '☀️ Chế độ sáng';
+    }
+
+    // Bấm nút để đổi chế độ
+    btn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        btn.innerText = '☀️ Chế độ sáng';
+        localStorage.setItem('mode', 'dark');
+      } else {
+        btn.innerText = '🌙 Chế độ tối';
+        localStorage.setItem('mode', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
